@@ -1,4 +1,5 @@
 import streamlit as st
+import requests 
 
 st.title("🎓 StudyMate AI")
 
@@ -22,7 +23,7 @@ if user_input:
 
     if st.session_state.step == 0:
         if "جدول" in user_input or "اذاكر" in user_input:
-            reply = "تمام 👍 قولّي عندك كام مادة؟"
+            reply = "تمام  قولّي عندك كام مادة؟"
             st.session_state.step = 1
         elif "امتحان" in user_input:
             reply = "امتحانك كمان كام يوم؟"
@@ -33,7 +34,7 @@ if user_input:
     elif st.session_state.step == 1:
         try:
             subjects = int(user_input)
-            reply = f"تمام 👌 ذاكر {subjects} مواد، كل مادة ساعتين يوميًا"
+            reply = f"تمام  ذاكر {subjects} مواد، كل مادة ساعتين يوميًا"
         except:
             reply = "قولّي رقم بس (عدد المواد)"
 
@@ -43,7 +44,7 @@ if user_input:
             if days <= 3:
                 reply = "ركز على المراجعة السريعة"
             else:
-                reply = f"عندك {days} أيام 👍 ذاكر كل يوم جزء"
+                reply = f"عندك {days} أيام  ذاكر كل يوم جزء"
         except:
             reply = "قولّي عدد الأيام بالأرقام"
 
