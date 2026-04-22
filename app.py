@@ -2,29 +2,24 @@ import streamlit as st
 
 st.title("🎓 StudyMate AI")
 
-# تخزين الحالة
 if "step" not in st.session_state:
     st.session_state.step = 0
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# عرض الرسائل القديمة
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.write(msg["content"])
 
-# إدخال المستخدم
 user_input = st.chat_input("اكتب سؤالك")
 
 if user_input:
-    # عرض رسالة المستخدم
     st.session_state.messages.append({"role": "user", "content": user_input})
 
     with st.chat_message("user"):
         st.write(user_input)
 
-    # رد البوت
     if st.session_state.step == 0:
         if "جدول" in user_input or "اذاكر" in user_input:
             reply = "تمام 👍 قولّي عندك كام مادة؟"
@@ -58,7 +53,8 @@ if user_input:
 
     st.session_state.messages.append({"role": "assistant", "content": reply})
 
-# زرار إعادة
 if st.button("🔄 إعادة المحادثة"):
     st.session_state.step = 0
     st.session_state.messages = []
+
+   
