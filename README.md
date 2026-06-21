@@ -20,8 +20,14 @@ A bilingual (Arabic & English) AI study assistant built with Streamlit and power
 📁 Project Structure
 
 project/
+
+
 │
+
+
 ├── app.py          # Main application — UI + API logic
+
+
 └── README.md       # This file
 
 
