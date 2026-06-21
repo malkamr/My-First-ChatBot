@@ -3,6 +3,13 @@
 A bilingual (Arabic & English) AI study assistant built with Streamlit and powered by OpenRouter. StudyMate helps students create study schedules, plan for exams, and organize their time — all through a friendly conversational interface.
 
 
+🌍 Live Demo:
+
+
+(https://my-interactive-chatbot.streamlit.app/)
+
+
+
 ✨ Features
 
 
