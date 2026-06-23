@@ -59,6 +59,9 @@ project/
 Python 3.8 or higher
 
 
+Streamlit
+
+
 A free OpenRouter API key
 
 🌐 How to run
